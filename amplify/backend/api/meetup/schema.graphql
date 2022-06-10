@@ -21,3 +21,11 @@ type Comment @model{
     content: String!
     post: Post @belongsTo
 }
+
+type Students @model {
+    id: ID!
+    firstName: String
+    lastName: String!
+    email: String!
+    studentId: Int!
+}

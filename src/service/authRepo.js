@@ -3,12 +3,19 @@ import awsExport from '../aws-exports';
 
 Amplify.configure(awsExport);
 
-class AuthRepo {
-    constructor(){
-
+export default class AuthRepo {
+    
+    static async login(username, password){
+        return Auth.signIn(username, password);
+        // add user to session.
     }
 
-    async getUser() {
+    static async logout(){
+        //remove user from session.
+        return Auth.signOut();
+    }
+
+    static async getUser() {
         let data;
 
         try{
@@ -19,5 +26,3 @@ class AuthRepo {
         return { ...data };
     }
 }
-
-export default AuthRepo;

@@ -241,3 +241,42 @@ export const onDeleteComment = /* GraphQL */ `
     }
   }
 `;
+export const onCreateStudents = /* GraphQL */ `
+  subscription OnCreateStudents {
+    onCreateStudents {
+      id
+      firstName
+      lastName
+      email
+      studentId
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const onUpdateStudents = /* GraphQL */ `
+  subscription OnUpdateStudents {
+    onUpdateStudents {
+      id
+      firstName
+      lastName
+      email
+      studentId
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const onDeleteStudents = /* GraphQL */ `
+  subscription OnDeleteStudents {
+    onDeleteStudents {
+      id
+      firstName
+      lastName
+      email
+      studentId
+      createdAt
+      updatedAt
+    }
+  }
+`;

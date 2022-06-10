@@ -268,3 +268,51 @@ export const deleteComment = /* GraphQL */ `
     }
   }
 `;
+export const createStudents = /* GraphQL */ `
+  mutation CreateStudents(
+    $input: CreateStudentsInput!
+    $condition: ModelStudentsConditionInput
+  ) {
+    createStudents(input: $input, condition: $condition) {
+      id
+      firstName
+      lastName
+      email
+      studentId
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const updateStudents = /* GraphQL */ `
+  mutation UpdateStudents(
+    $input: UpdateStudentsInput!
+    $condition: ModelStudentsConditionInput
+  ) {
+    updateStudents(input: $input, condition: $condition) {
+      id
+      firstName
+      lastName
+      email
+      studentId
+      createdAt
+      updatedAt
+    }
+  }
+`;
+export const deleteStudents = /* GraphQL */ `
+  mutation DeleteStudents(
+    $input: DeleteStudentsInput!
+    $condition: ModelStudentsConditionInput
+  ) {
+    deleteStudents(input: $input, condition: $condition) {
+      id
+      firstName
+      lastName
+      email
+      studentId
+      createdAt
+      updatedAt
+    }
+  }
+`;

@@ -1,8 +1,6 @@
 import './App.css';
 import { useEffect, useState } from 'react';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import { Amplify } from 'aws-amplify';
-import awsExport from './aws-exports';
 
 import { withAuthenticator } from "@aws-amplify/ui-react";
 import '@aws-amplify/ui-react/styles.css';
@@ -16,14 +14,11 @@ import AddPost from './container/addPost';
 import Post from './container/post';
 import React from 'react';
 
-Amplify.configure(awsExport);
-let authRepo = new AuthRepo();
-
 function App({signOut}) {
   const [user, setUser] = useState(null);
 
   useEffect(() => {
-    authRepo.getUser().then(data => setUser(data));
+    AuthRepo.getUser().then(data => setUser(data));
   }, [])
   
 
